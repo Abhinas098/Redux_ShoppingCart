@@ -5,7 +5,7 @@ export const fetchCartData = () => {
   return async (dispatch) => {
     const fetchData = async () => {
       const res = await fetch(
-        "https://redux-shopping-cart-a3e23-default-rtdb.firebaseio.com/cart.json"
+        "https://redux-cart-f0691-default-rtdb.firebaseio.com/cart.json"
       );
       if (!res.ok) {
         throw new Error("Could not fetch Cart data.");
@@ -46,7 +46,7 @@ export const sendCartData = (cart) => {
     );
     const sendRequest = async () => {
       const res = await fetch(
-        "https://redux-shopping-cart-a3e23-default-rtdb.firebaseio.com/cart.json",
+        "https://redux-cart-f0691-default-rtdb.firebaseio.com/cart.json",
         {
           method: "PUT",
           body: JSON.stringify({
